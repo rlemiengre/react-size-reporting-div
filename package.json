@@ -1,0 +1,31 @@
+{
+	"name": "react-size-reporting-div",
+	"version": "1.0.1",
+	"homepage": "https://redhotcoding.com",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/rlemiengre/react-size-reporting-div.git"
+	},
+	"description": "A React component which renders a DIV element with the provided content inside it and reports the width and height of the content to a callback function whenever the size of the DIV is changed.",
+	"main": "SizeReportingDiv.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"keywords": [
+		"react",
+		"ResizeObserver",
+		"resize",
+		"div",
+		"resizing",
+		"size",
+		"reporting",
+		"report",
+		"callback"
+	],
+	"author": "Ruben Lemiengre",
+	"license": "MIT",
+	"peerDependencies": {
+		"react": "^17.0.2"
+	},
+	"devDependencies": {}
+}
