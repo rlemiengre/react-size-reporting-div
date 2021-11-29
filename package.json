@@ -1,6 +1,6 @@
 {
 	"name": "react-size-reporting-div",
-	"version": "1.0.4",
+	"version": "1.0.5",
 	"homepage": "https://redhotcoding.com",
 	"repository": {
 		"type": "git",
@@ -13,14 +13,17 @@
 	},
 	"keywords": [
 		"react",
-		"ResizeObserver",
-		"resize",
 		"div",
+		"element",
+		"resize",
 		"resizing",
 		"size",
+		"ResizeObserver",
+		"useResizeObserver",
 		"reporting",
 		"report",
-		"callback"
+		"callback",
+		"detect"
 	],
 	"author": "Ruben Lemiengre",
 	"license": "MIT",
