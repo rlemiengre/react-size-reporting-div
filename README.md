@@ -30,8 +30,10 @@ Use the package manager **npm** to install react-size-reporting-div.
 import { SizeReportingDiv } from 'react-size-reporting-div';
 
 const MyComponent = props => {
-   const _onSizeUpdated = (width, height) => console.log(width, height);
-   return 
+   const _onSizeUpdated = 
+      (width, height) => 
+         console.log("Width:", width, "Height:", height);
+   return (
       <div
          style={{
             height: '100%',
@@ -41,9 +43,9 @@ const MyComponent = props => {
          <SizeReportingDiv
             onSizeUpdated={_onSizeUpdated}
             style={{
-               width: '100px',
-               height: '100px',
-               resize: 'both',
+               width: "100%",
+               height: "100px",
+               resize: "vertical",
                overflow: 'auto',
                backgroundColor: 'grey',
                color: 'white',
