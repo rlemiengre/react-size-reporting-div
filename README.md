@@ -26,7 +26,7 @@ Use the package manager **npm** to install react-size-reporting-div.
 
 ## Demo
 
-Check out a working demo on [CodeSandbox](https://codesandbox.io/s/reverent-wave-r3tj1).
+Check out a working demo on [CodeSandbox](https://codesandbox.io/s/react-size-reporting-div-demo-i6sgh).
 
 ## Basic usage
 
