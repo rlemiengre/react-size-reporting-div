@@ -24,41 +24,62 @@ Use the package manager **npm** to install react-size-reporting-div.
 >> npm install --save react-size-reporting-div
 ```
 
+## Demo
+
+Check out a working demo on [CodeSandbox](https://codesandbox.io/s/reverent-wave-r3tj1).
+
 ## Basic usage
 
 ```js
-import { SizeReportingDiv } from 'react-size-reporting-div';
+import { SizeReportingDiv } from "react-size-reporting-div";
+import { useState } from "react";
 
-const MyComponent = props => {
-   const _onSizeUpdated = 
-      (width, height) => 
-         console.log("Width:", width, "Height:", height);
-   return (
-      <div
-         style={{
-            height: '100%',
-            width: '100%'
-         }}
+const MyComponent = (props) => {
+  return (
+    <div
+      style={{
+        height: "100%",
+        width: "100%"
+      }}
+    >
+      <SizeReportingDiv
+        onSizeUpdated={props.onSizeUpdated}
+        style={{
+          width: "100%",
+          height: "100px",
+          resize: "vertical",
+          overflow: "auto",
+          backgroundColor: "grey",
+          color: "white",
+          padding: "5px"
+        }}
+        reportingMode="debounce"
+        timeout={500}
       >
-         <SizeReportingDiv
-            onSizeUpdated={_onSizeUpdated}
-            style={{
-               width: "100%",
-               height: "100px",
-               resize: "vertical",
-               overflow: 'auto',
-               backgroundColor: 'grey',
-               color: 'white',
-               padding: '5px'
-            }}
-            reportingMode='debounce'
-            timeout={500}
-         >
-            <p>resize me!</p>
-         </SizeReportingDiv>
-      </div>
-   );
+        <p>resize me!</p>
+      </SizeReportingDiv>
+    </div>
+  );
 };
+
+export default function App() {
+  const [width, setWidth] = useState(0);
+  const [height, setHeight] = useState(0);
+  const _onSizeUpdated = (width, height) => {
+    setWidth(width);
+    setHeight(height);
+  };
+  return (
+    <>
+      <div>
+        DIV width: {width} DIV height: {height}
+      </div>
+      <div className="App">
+        <MyComponent onSizeUpdated={_onSizeUpdated} />
+      </div>
+    </>
+  );
+}
 ```
 
 ## Props
